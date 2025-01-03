@@ -1,29 +1,42 @@
-/*  Create the class Student  in the files student.h and student.cpp, which includes each of the following variables:
+#ifndef student.h
+#define student.h
 
-•  student ID
+class Student {
+    private:
+        string studentId;
+        string firstName;
+        string lastName;
+        string email;
+        int age;
+        int numDays[3];
+        DegreeProgram degreeProgram;
 
-•  first name
+    public:
 
-•   last name
+// d.  constructor using all of the input parameters provided in the table
+        Student(string studentId, string firstName, string lastName, string email, int age, int numDays[], DegreeProgram degreeProgram);
 
-•  email address
+// a.  an accessor (i.e., getter) for each instance variable from part D1
+        string GetStudentId() const;
+        string GetFirstName() const;
+        string GetLastName() const;
+        string GetEmail() const;
+        int GetAge() const;
+        int GetNumDays(int index) const;
+        DegreeProgram GetDegreeProgram() const;
 
-•  age
+// b.  a mutator (i.e., setter) for each instance variable from part D1
+        void SetStudentId(string studentId);
+        void SetFirstName(string firstName);
+        void SetLastName(string lastName);
+        void SetEmail(string email);
+        void SetAge(int age);
+        void SetNumDays(int newNumDays[3]);
+        void SetDegreeProgram(DegreeProgram degreeProgram);
 
-•  array of number of days to complete each course
+// e.  print() to print specific student data
+        void Print() const;
 
-•  degree program
+};
 
-2.  Create each of the following functions in the Student class:
-
-a.  an accessor (i.e., getter) for each instance variable from part D1
-
-b.  a mutator (i.e., setter) for each instance variable from part D1
-
-c.  All external access and changes to any instance variables of the Student class must be done using accessor and mutator functions.
-
-d.  constructor using all of the input parameters provided in the table
-
-e.  print() to print specific student data
-
-*/
+#endif
