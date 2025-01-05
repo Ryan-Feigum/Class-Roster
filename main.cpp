@@ -15,28 +15,31 @@ int main() {
     Roster classRoster;
 // 
 // 3.  Add each student to classRoster.
+    classRoster.PopulateRoster();
+
 // 
 // 4.  Convert the following pseudo code to complete the rest of the  main() function:
 // 
-// classRoster.printAll();
+    classRoster.PrintAll();
 // 
-// classRoster.printInvalidEmails();
+    classRoster.PrintInvalidEmails();
 // 
 //  
 // 
 // //loop through classRosterArray and for each element:
 // 
-// classRoster.printAverageDaysInCourse(/*current_object's student id*\/);
-// 
+    for (int i = 0; i < 5; ++i) {
+    classRoster.PrintAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentId());
+    }
 // 
 // 
 // Note: For the current_object's student id, use an accessor (i.e., getter) for the classRosterArray to access the student id.
 // 
 // 
 // 
-// classRoster.printByDegreeProgram(SOFTWARE);
+    classRoster.PrintByDegreeProgram(SOFTWARE);
 // 
-// classRoster.remove("A3");
+    classRoster.Remove("A3");
 // 
 // classRoster.printAll();
 // 
