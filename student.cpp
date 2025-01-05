@@ -74,11 +74,11 @@ Student::Student(string newId, string newFirstName, string newLastName, string n
 
 //that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. 
         void Student::Print() const {
-            cout << studentId << "  ";
-            cout << "First Name: " << firstName << "    ";
-            cout << "Last Name: " << lastName << "  ";
-            cout << "Email: " << email << " ";
-            cout << "Age: " << age << " ";
+            cout << studentId << "\t";
+            cout << "First Name: " << firstName << "\t";
+            cout << "Last Name: " << lastName << "\t";
+            cout << "Email: " << email << "\t";
+            cout << "Age: " << age << "\t";
             cout << "daysInCourse: " << "{";
             for (int i = 0; i < 3; ++i) {
                 cout <<  numDays[i];
