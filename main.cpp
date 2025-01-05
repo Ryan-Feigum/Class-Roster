@@ -11,44 +11,37 @@ int main() {
     cout << "Student ID: 012458729" << endl;
     cout << "Name: Ryan Feigum" << endl;
 
-// 2.  Create an instance of the Roster class called classRoster.
+    // 2.  Create an instance of the Roster class called classRoster.
     Roster classRoster;
-// 
-// 3.  Add each student to classRoster.
+ 
+    // 3.  Add each student to classRoster.
     classRoster.PopulateRoster();
 
-// 
-// 4.  Convert the following pseudo code to complete the rest of the  main() function:
-// 
+    // 4.  Convert the following pseudo code to complete the rest of the  main() function:
+ 
+    // Print all students
     classRoster.PrintAll();
-// 
+ 
+    // Print invalid emails
     classRoster.PrintInvalidEmails();
-// 
-//  
-// 
-// //loop through classRosterArray and for each element:
-// 
-    for (int i = 0; i < 5; ++i) {
-    classRoster.PrintAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentId());
-    }
-// 
-// 
-// Note: For the current_object's student id, use an accessor (i.e., getter) for the classRosterArray to access the student id.
-// 
-// 
-// 
-    classRoster.PrintByDegreeProgram(SOFTWARE);
-// 
-    classRoster.Remove("A3");
-// 
-// classRoster.printAll();
-// 
-// classRoster.remove("A3");
-// 
-// //expected: the above line should print a message saying such a student with this ID was not found.
-// 
-// 5.  Implement the destructor to release the memory that was allocated dynamically in Roster.
-// 
 
-return 0;
+    // Print average days in course for each student
+    for (int i = 0; i < 5; ++i) {
+        classRoster.PrintAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentId());
+    }
+    // Print students by degree program
+    classRoster.PrintByDegreeProgram(SOFTWARE);
+
+    // Remove student A3
+    classRoster.Remove("A3");
+
+    // Print all students to show A3 was removed
+    classRoster.PrintAll();
+
+    // Attempt to remove student A3 again to show error message when attempting to remove a student which does not exist
+    classRoster.Remove("A3");
+
+    // Roster class destructor will be automatically called when classRoster goes out of scope
+
+    return 0;
 };
