@@ -9,14 +9,16 @@
 using namespace std;
 
 
-// Provided starting data table
-const string studentData[5] = {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,[firstname],[lastname],[emailaddress],[age], [numberofdaystocomplete3courses],SOFTWARE"};
+
 
 // 1.  Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.”
 Student* classRosterArray[5];
 
 // 2.  Create a student object for each student in the data table and populate classRosterArray.
 void PopulateRoster() {
+    // Provided starting data table
+    const string studentData[5] = {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,[firstname],[lastname],[emailaddress],[age], [numberofdaystocomplete3courses],SOFTWARE"};
+    
     for (int i = 0; i < 5; ++i) {
         // Parse each set of data identified in the “studentData Table.”
         istringstream ss(studentData[i]);

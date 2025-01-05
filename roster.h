@@ -1,7 +1,8 @@
-#ifndef roster.h
-#define roster.h
+#ifndef ROSTER_H
+#define ROSTER_H
 
 #include "degree.h"
+#include "student.h"
 class Roster {
 
 //1.  Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.”

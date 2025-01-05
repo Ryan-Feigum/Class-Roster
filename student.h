@@ -1,5 +1,10 @@
-#ifndef student.h
-#define student.h
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include <string>
+#include "degree.h"
+
+using namespace std;
 
 class Student {
     private:
