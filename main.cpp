@@ -27,10 +27,11 @@ int main() {
 
     // Print average days in course for each student
     for (int i = 0; i < 5; ++i) {
-        classRoster.PrintAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentId());
+        string studentId = classRoster.GetStudentId(i);
+        classRoster.PrintAverageDaysInCourse(studentId);
     }
     // Print students by degree program
-    classRoster.PrintByDegreeProgram(SOFTWARE);
+    classRoster.PrintByDegreeProgram(DegreeProgram::SOFTWARE);
 
     // Remove student A3
     classRoster.Remove("A3");

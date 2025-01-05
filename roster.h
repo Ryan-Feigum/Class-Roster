@@ -14,8 +14,11 @@ class Roster {
 //b.  Add each student object to classRosterArray.
 
 //3.  Define the following functions:
-public:
+private:
     Student* classRosterArray[5];
+
+public:
+    string GetStudentId(int i);
 
     void PopulateRoster();
 

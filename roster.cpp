@@ -137,6 +137,11 @@ void PrintByDegreeProgram(DegreeProgram degreeProgram) {
     }
 };
 
+// Added getter for studentID to allow for PrintAverageDaysInCourse to work
+string GetStudentId(int i) {
+    return classRosterArray[i]->GetStudentId();
+};
+
 Roster::~Roster() {
     for (int i = 0; i < 5; ++i) {
         delete classRosterArray[i];
